@@ -102,13 +102,3 @@ jobs:
     - name: print output
       run: |
         ls -lha .
-
-    - name: update release
-      uses: ncipollo/release-action@v1
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        tag: latest
-        body: "a lightweight, multi-platform, multi-architecture exploit hook framework"
-        artifacts: "build/dobby-macos-all.tar.gz,build/dobby-iphoneos-all.tar.gz"
-        allowUpdates: true
-        replacesArtifacts: true
